@@ -44,4 +44,13 @@ async function getHistoryHandler(request, h){
   return response;
 }
 
-module.exports = { predictHandler, getHistoryHandler };
+function returnReady(request, h){
+  const response = h.response({
+    status: 'success',
+    message: 'server is listening'
+  })
+  response.code(200);
+  return response;
+}
+
+module.exports = { predictHandler, getHistoryHandler, returnReady };

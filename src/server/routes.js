@@ -1,4 +1,4 @@
-const { predictHandler, getHistoryHandler } = require('./handler')
+const { predictHandler, getHistoryHandler, returnReady } = require('./handler')
 
 const routes = [
   {
@@ -17,6 +17,12 @@ const routes = [
     path: '/predict/histories',
     method: 'GET',
     handler: getHistoryHandler,
+  },
+  //a route for cloud run HTTP checks
+  {
+    path: '/ready',
+    method: 'GET',
+    handler: returnReady,
   }
 ]
 

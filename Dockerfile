@@ -2,9 +2,8 @@ FROM node:16
 
 WORKDIR /app
 
-ENV PORT 3000
-ENV NODE_ENV=production
 ENV HOST 0.0.0.0
+ENV PORT 3000
 
 COPY . .
 
